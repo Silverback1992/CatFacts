@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace CatFactsApi.Controllers
+namespace CatFacts.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

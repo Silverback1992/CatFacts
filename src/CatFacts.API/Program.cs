@@ -1,8 +1,16 @@
+using CatFacts.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+string cn = builder.Configuration.GetConnectionString("CatFactsDbConnectionString");
+builder.Services.AddDbContext<CatFactsDbContext>(options => 
+{
+    options.UseSqlServer(cn);
+});
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

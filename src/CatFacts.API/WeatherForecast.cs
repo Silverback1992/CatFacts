@@ -1,4 +1,4 @@
-namespace CatFactsApi
+namespace CatFacts.API
 {
     public class WeatherForecast
     {
